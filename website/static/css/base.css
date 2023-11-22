@@ -1,0 +1,133 @@
+html{
+  height: 100%;
+}
+
+body {
+height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    padding-bottom: 0rem;
+}
+
+@media all and (min-width: 992px) {
+	.dropdown-menu li{ position: relative; 	}
+	.nav-item .submenu{
+		display: none;
+		position: absolute;
+		left:100%; top:-7px;
+	}
+	.nav-item .submenu-left{
+		right:100%; left:auto;
+	}
+	.dropdown-menu > li:hover{ background-color: #228B22}
+	.dropdown-menu > li:hover > .submenu{ display: block; }
+}
+
+@media (max-width: 991px) {
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+}
+
+.navbar {
+  border-radius: 0 0 30px 30px;
+  background-color: #228B22;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  font: 1.4rem "Fira Sans", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item {
+  margin: 0 50px;
+}
+
+.nav-item:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: white;
+  height: 3px;
+  transition: width 0.3s;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+}
+
+.nav-link.dropdown-toggle{
+   color: white;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.nav-link.dropdown-toggle:focus,
+.nav-link.dropdown-toggle:active,
+.nav-link.dropdown-toggle:hover,
+.navbar-nav .nav-link.dropdown-toggle,
+.navbar-nav .nav-item.dropdown:hover .nav-link.dropdown-toggle{
+  color: white;
+}
+
+.dropdown-item:hover{
+    background-color: #a6a6a6;
+}
+
+#footer {
+  height: 2.5rem;
+}
+
+#main {
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-theme .theme-toggle-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme .theme-toggle-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+#themeToggleBtn {
+    margin-left: 50px;
+    border-radius: 50px;
+
+}
+
+#themeToggleBtn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/viewAppliances.css">
+{% endblock %}
+
+{% block title %}View Appliances{% endblock %}
+
+{% block content %}
+<div class="appliances-container">
+    {% for appliance in appliances %}
+        {% if loop.index0 % 5 == 0 %}
+            <div class="row">
+        {% endif %}
+        <div class="appliances-card">
+            <img src="data:;base64,{{image_list[loop.index0]}}" alt="Appliance Image" width="200" height="200">
+            <h3>{{ appliance.applianceName }}</h3>
+            <p>Condition: {{ appliance.condition }}%</p>
+
+            <div class="buttons">
+                <a href="editAppliance_{{appliance.id}}">
+                    <button type="submit" class="btn btn-dark">Edit</button>
+                </a>
+
+                <form action="{{ url_for('adding.deleteAppliance', applianceID=appliance.id) }}" method="post">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+
+        </div>
+        {% if (loop.index0 + 1) % 5 == 0 or loop.last %}
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

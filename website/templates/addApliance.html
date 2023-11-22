@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/addAppliance.css">
+{% endblock %}
+
+{% block title %}Add Appliance{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    <div class="appliance-box">
+
+        <div class="appliance-info">
+            <p>Image: </p>
+            <input type="file" id="image" name="image" />
+
+            <p>Appliance Name: </p>
+            <input id="applianceName" type="text" name="applianceName"/>
+
+            <p>Condition in %: </p>
+            <input id="condition" type="number" name="condition" min="1" max="100"/>
+
+        </div>
+
+        <div class="buttons">
+            <div class="actionbutton">
+                <input type="submit" value="Add Appliance"/>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/viewItems.css">
+{% endblock %}
+
+{% block title %}View Items{% endblock %}
+
+{% block content %}
+<div class="buttons-container">
+  <div class="actionbutton">
+      <a href="viewProducts">
+          <button class="button">
+              <div class="button-content">
+                  <img src="{{url_for('static', filename='img/viewProduct.jpg')}}" alt="buttonpng" width="550" height="500">
+                  <p>View Products</p>
+              </div>
+          </button>
+      </a>
+  </div>
+
+  <div class="actionbutton">
+      <a href="viewAppliances">
+          <button class="button">
+              <div class="button-content">
+                  <img src="{{url_for('static', filename='img/viewAppliance.jpg')}}" alt="buttonpng" width="550" height="500">
+                  <p>View Appliances</p>
+              </div>
+          </button>
+      </a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/editProduct.css">
+{% endblock %}
+
+{% block title %}Edit Product{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    <div class="product-box">
+
+        <div class="product-info">
+            <p>Image: </p>
+            <input type="file" id="image" name="image"/>
+
+            <p>Product Name: </p>
+            <input id="productName" type="text" name="productName" value="{{productName}}"/>
+
+            <p>Amount: </p>
+            <input id="amount" type="number" name="amount" min="1" value="{{amount}}"/>
+
+            <p>Location: </p>
+            <input type="text" id="location" name="location" value="{{location}}"/><br>
+        </div>
+
+        <div class="buttons">
+            <div class="actionbutton">
+                <input type="submit" value="Save"/>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

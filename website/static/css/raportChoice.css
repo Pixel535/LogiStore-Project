@@ -1,0 +1,35 @@
+.buttons-container {
+    margin: auto;
+}
+
+.buttons-container .actionbutton{
+    display: inline-block;
+    float: left;
+    margin: 30px;
+}
+
+.button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    border-radius: 50px;
+}
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button-content {
+    text-align: center;
+}
+
+.button-content img {
+    display: block;
+    margin: 25px;
+    border-radius: 50px;
+}
+
+.button-content p {
+    margin-top: 10px;
+    font: 2.5rem "Fira Sans", sans-serif;
+}

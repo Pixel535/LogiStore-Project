@@ -1,0 +1,25 @@
+.profile-box {
+    background-color: #228B22;
+    padding: 40px;
+    color: white;
+    border-radius: 50px;
+    font: 2rem "Fira Sans", sans-serif;
+    margin: 30px;
+}
+
+.icon {
+    text-align: center;
+    padding:20px;
+    font-size:50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.user-info p{
+    padding-top:25px;
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/addItems.css">
+{% endblock %}
+
+{% block title %}Add Items{% endblock %}
+
+{% block content %}
+<div class="buttons-container">
+  <div class="actionbutton">
+      <a href="addProduct">
+          <button class="button">
+              <div class="button-content">
+                  <img src="{{url_for('static', filename='img/addProduct.jpg')}}" alt="buttonpng" width="550" height="500">
+                  <p>Add Product</p>
+              </div>
+          </button>
+      </a>
+  </div>
+
+  <div class="actionbutton">
+      <a href="addAppliance">
+          <button class="button">
+              <div class="button-content">
+                  <img src="{{url_for('static', filename='img/addApliance.jpg')}}" alt="buttonpng" width="550" height="500">
+                  <p>Add Appliance</p>
+              </div>
+          </button>
+      </a>
+  </div>
+</div>
+{% endblock %}

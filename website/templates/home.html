@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/home.css">
+{% endblock %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div class="txt">
+    <div class="text-container">
+        <p>Welcome {{username}}</p>
+        <p>in LogiStore</p>
+    </div>
+</div>
+
+<div class="icon-container3">
+    <i class="fa-solid fa-warehouse fa-2xl"></i>
+</div>
+{% endblock %}

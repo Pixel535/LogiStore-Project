@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/seeUsers.css">
+{% endblock %}
+
+{% block title %}See Users{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>User List</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Worker Card ID</th>
+                <th>Username</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.workerCardID }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>
+                        <form action="{{ url_for('admin.deleteUser', userID=user.id) }}" method="post">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

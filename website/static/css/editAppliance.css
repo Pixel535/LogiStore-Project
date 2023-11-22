@@ -1,0 +1,26 @@
+.appliance-box{
+    background-color: #228B22;
+    padding: 40px;
+    color: white;
+    border-radius: 50px;
+    font: 1.5rem "Fira Sans", sans-serif;
+    margin: 60px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.buttons .actionbutton{
+    display: inline-block;
+    float: left;
+    margin: 30px;
+}
+
+.appliance-info p{
+    padding-top:25px;
+}

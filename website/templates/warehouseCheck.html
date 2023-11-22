@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/warehouseCheck.css">
+{% endblock %}
+
+{% block title %}Warehouse Check{% endblock %}
+
+{% block content %}
+<h1>Warehouse Dashboard</h1>
+<button id="toggle-button" onclick="toggleGraphs()">Hide Graphs</button>
+<div class="graphs" id="graphs-container" style="display: block">
+    <div class="graph-row">
+        {{ plot_1|safe }}
+        {{ plot_2|safe }}
+    </div>
+    <div class="graph-row">
+        {{ plot_3|safe }}
+    </div>
+    <div class="graph-row">
+        {{ plot_4|safe }}
+        {{ plot_5|safe }}
+    </div>
+</div>
+
+<script src="static/script/warehouseCheck.js"></script>
+{% endblock %}

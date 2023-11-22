@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/viewProducts.css">
+{% endblock %}
+
+{% block title %}View Products{% endblock %}
+
+{% block content %}
+<div class="products-container">
+    {% for product in products %}
+        {% if loop.index0 % 5 == 0 %}
+            <div class="row">
+        {% endif %}
+        <div class="product-card">
+            <img src="data:;base64,{{image_list[loop.index0]}}" alt="Product Image" width="200" height="200">
+            <h3>{{ product.productName }}</h3>
+            <p>Location: {{ product.location }}</p>
+            <p>Amount: {{ product.amount }}</p>
+
+            <div class="buttons">
+                <a href="editProduct_{{product.id}}">
+                    <button type="submit" class="btn btn-dark">Edit</button>
+                </a>
+
+                <form action="{{ url_for('adding.deleteProduct', productID=product.id) }}" method="post">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+
+        </div>
+        {% if (loop.index0 + 1) % 5 == 0 or loop.last %}
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block css_file %}
+<link rel="stylesheet" href="static/css/profile.css">
+{% endblock %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="profile-box">
+        <div class="icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="user-info">
+            <p>Worker Card ID: <br> {{workerCardID}}</p>
+
+            <p>Username: </p>
+            <input type="text" name="username" value="{{username}}"/>
+
+            <p>Type a new password<br>if you want to change it: </p>
+            <input type="text" name="password"/>
+
+            <p>Role: <br> {{role}}</p>
+        </div>
+
+        <div class="buttons">
+            <div class="actionbutton">
+                <input type="submit" name="submit_button" value="Save"/>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
