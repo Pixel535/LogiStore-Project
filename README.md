@@ -1,5 +1,5 @@
 # Logistore - Project
-The project has been made as a part of Functional Programming course for Military University of Technology
+The project has been made as a part of Web systems course for Military University of Technology
 
 # Description
 The web application will simulate the operation of a warehouse. Users can add, delete, edit and display products in this warehouse. 
